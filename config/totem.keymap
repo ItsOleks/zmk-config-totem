@@ -110,7 +110,7 @@
 			bindings = <
 
                 &kp X        &kp V       &kp J        &kp D       &kp Z           &kp SQT     &kp W         &kp FSLH     &kp MINUS   &kp COMMA
-                &hml LGUI A  &hml LALT S &hml LCTRL H &mt LSHFT T &kp M           &kp Y       &rml RSHFT C  &rml RCTRL A &rml RALT E &rml RGUI O
+                &hml LGUI A  &hml LALT S &hml LCTRL H &mt LSHFT T &kp M           &kp Y       &hmr RSHFT C  &hmr RCTRL A &hmr RALT E &hmr RGUI O
     &kp EQUAL   &kp B        &kp F       &kp L        &kp K       &kp Q           &kp P       &kp G         &kp O        &kp U       &kp DOT     &kp SEMI
                                          &mo ADJ      &lt NAV R   &kp BSPC        &lt SYM RET &lt NUM SPACE &mo FUN
 			>;
