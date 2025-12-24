@@ -32,13 +32,6 @@
 #define ADJ  4
 #define FUN  5
 
-&mt {
-  quick-tap-ms = <100>;
-  global-quick-tap;
-  flavor = "tap-preferred";
-  tapping-term-ms = <170>;
-};
-
 / {
 	behaviors {
 		hml: home_row_mod_left {
@@ -90,12 +83,12 @@
 	combos {
 		compatible = "zmk,combos";
 		combo_esc {
-			tomeout-ms = <50>;
+			timeout-ms = <50>;
             key-positions = <33 36>;
             bindings = <&kp ESC>;
 		};
 		combo_cw {
-			tomeout-ms = <50>;
+			timeout-ms = <50>;
             key-positions = <24 27>;
             bindings = <&caps_word>;
 		};
