@@ -122,7 +122,7 @@
 			bindings = <
 
                 &none    &none    &none     &none     &none     &none        &kp C_BRI_DN &kp C_BRI_UP &none     &none
-                &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none     &none        &kp LEFT     &kp DOWN     &kp UP    &kp RIGHT
+                &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none     &kp TAB      &kp LEFT     &kp DOWN     &kp UP    &kp RIGHT
     &none       &none    &none    &none     &none     &none     &none        &kp HOME     &kp PG_DN    &kp PG_UP &kp END     &kp CAPS      
                                   &none     &trans    &none     &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE      
 			>;
