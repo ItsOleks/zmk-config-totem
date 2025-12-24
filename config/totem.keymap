@@ -101,89 +101,89 @@
 		};
 	};
 
-        keymap {
-                compatible = "zmk,keymap";
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+	keymap {
+		compatible = "zmk,keymap";
+		// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-                base_layer {
-label= "BASE";
- bindings = <
+        base_layer {
+			label= "BASE";
+			bindings = <
 
                 &kp X        &kp V       &kp J        &kp D       &kp Z           &kp SQT     &kp W         &kp FSLH     &kp MINUS   &kp COMMA
                 &hml LGUI A  &hml LALT S &hml LCTRL H &mt LSHFT T &kp M           &kp Y       &rml RSHFT C  &rml RCTRL A &rml RALT E &rml RGUI O
     &kp EQUAL   &kp B        &kp F       &kp L        &kp K       &kp Q           &kp P       &kp G         &kp O        &kp U       &kp DOT     &kp SEMI
                                          &mo ADJ      &lt NAV R   &kp BSPC        &lt SYM RET &lt NUM SPACE &mo FUN
-                        >;
-                };
+			>;
+		};
 
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+		// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                nav_layer {
-label= "NAV";
- bindings = <
+        nav_layer {
+			label= "NAV";
+			bindings = <
 
                 &none    &none    &none     &none     &none     &none        &kp C_BRI_DN &kp C_BRI_UP &none     &none
                 &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none     &none        &kp LEFT     &kp DOWN     &kp UP    &kp RIGHT
-    &none       &none    &none    &none     &none     &none     &none        &kp HOME     &kp PG_DN    &kp PG_UP &kp END     &CAPS      
+    &none       &none    &none    &none     &none     &none     &none        &kp HOME     &kp PG_DN    &kp PG_UP &kp END     &kp CAPS      
                                   &none     &trans    &none     &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE      
-                        >;
-                };
+			>;
+		};
 
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+		// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                num_layer {
-label= "NUM";
- bindings = <
+        num_layer {
+			label= "NUM";
+			bindings = <
 
                 &kp LSLH &kp STAR &kp MINUS &kp PLUS &kp AMPS        &none &none      &none     &none    &none
                 &kp N4   &kp N3   &kp N2    &kp N1   &kp N9          &none &kp RSHFT  &kp RCTRL &kp RALT &kp RGUI
     &kp EXCL    &kp N8   &kp N7   &kp N6    &kp N5   &kp PIPE        &none &none      &none     &none    &none    &none
                                   &none     &kp N0   &kp EQUAL       &none &trans     &none
-                        >;
-                };
+			>;
+		};
 
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+		// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                sym_layer {
-label= "SYM";
- bindings = <
+        sym_layer {
+			label= "SYM";
+			bindings = <
 
                 &kp AT    &kp CARET &kp TILDE &kp PRCNT &none          &none  &none     &none     &none    &none
                 &kp LT    &kp LBRC  &kp LBKT  &kp LPAR  &kp DLLR       &none  &kp RSHFT &kp RCTRL &kp RALT &kp RGUI
     &kp GRAVE   &kp GT    &kp RBRC  &kp RBKT  &kp RPAR  &none          &none  &none     &none     &none    &none    &none
                                     &none     &kp HASH  &kp BSLH       &trans &none     &none
-                        >;
-                };
+			>;
+		};
 
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+		// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                adjust_layer {
-label= "ADJ";
- bindings = <
+        adjust_layer {
+			label= "ADJ";
+			bindings = <
 
                 &none &none &none &none &none    &none &none &out OUT_TOG &bt BT_CLR &sys_reset
                 &none &none &none &none &none    &none &none &none        &bt BT_NXT &bootloader  
     &none       &none &none &none &none &none    &none &none &none        &bt BT_PRV &none       &none         
                             &none &none &none    &none &none &none      
-                        >;
-                };
+			>;
+		};
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                fun_layer {
-label= "FUN";
- bindings = <
+		fun_layer {
+			label= "FUN";
+			bindings = <
 
                 &kp F12  &kp F11  &kp F10   &kp F9   &kp F15        &none &none      &none     &none    &none
                 &kp F4   &kp F3   &kp F2    &kp F1   &kp F13        &none &kp RSHFT  &kp RCTRL &kp RALT &kp RGUI
     &kp EXCL    &kp F8   &kp F7   &kp F6    &kp F5   &kp F14        &none &none      &none     &none    &none    &none
                                   &none     &none    &none          &none &trans     &none
-                        >;
-                };
-        };
+			>;
+		};
+	};
 };
