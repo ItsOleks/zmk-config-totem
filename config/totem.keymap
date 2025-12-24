@@ -158,9 +158,9 @@
 			label= "ADJ";
 			bindings = <
 
-                &none &none &none &none &none    &none &none &out OUT_TOG &bt BT_CLR &sys_reset
+                &bt BT_CLR_ALL &none &none &none &none    &none &none &out OUT_TOG &bt BT_CLR &sys_reset
                 &none &none &none &none &none    &none &none &none        &bt BT_NXT &bootloader  
-    &none       &none &none &none &none &none    &none &none &none        &bt BT_PRV &none       &none         
+    &none       &none &none &none &none &none    &none &none &none        &bt BT_PRV &none       &bt BT_SEL 0         
                             &none &none &none    &none &none &none      
 			>;
 		};
