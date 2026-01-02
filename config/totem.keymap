@@ -3,7 +3,7 @@
 //                                                        ▄▀▀▀▄  ▄  ▄▀▀▀▄  ▄  ▄▀▀▀▄  █  ▄▀▀▀▄
 //                                                        █   █  █  █   █  █  █   █  █  █   █
 //                                                         ▀▀▀   █   ▀▀▀   █   ▀▀▀   ▀   ▀▀▀
-//                                                               █      ▄▄▄█▄▄▄    █   █  
+//                                                               █      ▄▄▄█▄▄▄    █   █
 //                                                               ▀      █  █  █     █▄█
 //                                                             ▀▀▀▀▀    █  █  █      ▀
 //                                                                      ▀  ▀  ▀
@@ -33,155 +33,155 @@
 #define FUN  5
 
 &lt {
-	tapping-term-ms = <280>;
-	require-prior-idle-ms = <150>;
+    tapping-term-ms = <280>;
+    flavor = "hold-preferred";
 };
 
 / {
-	behaviors {
-		hml: home_row_mod_left {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			bindings = <&kp>, <&kp>;
-			flavor = "balanced";
-			tapping-term-ms = <280>;
-			require-prior-idle-ms = <150>;
-			hold-trigger-key-positions = <KEYS_R KEYS_T>;
-			hold-trigger-on-release;
-		};
-		hmr: home_row_mod_right {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			bindings = <&kp>, <&kp>;
-			flavor = "balanced";
-			tapping-term-ms = <280>;
-			require-prior-idle-ms = <150>;
-			hold-trigger-key-positions = <KEYS_L KEYS_T>;
-			hold-trigger-on-release;
-		};
+    behaviors {
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <KEYS_R KEYS_T>;
+            hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <KEYS_L KEYS_T>;
+            hold-trigger-on-release;
+        };
 
-		lrpar: left_right_paren {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LPAR>, <&kp RPAR>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		lrbkt: left_right_bracket {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LBKT>, <&kp RBKT>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		lrbrc: left_right_brace {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LBRC>, <&kp RBRC>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		lrcmp: left_right_compare {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LT>, <&kp GT>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-	};
-	combos {
-		compatible = "zmk,combos";
-		combo_esc {
-			timeout-ms = <50>;
+        lrpar: left_right_paren {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        lrbkt: left_right_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp RBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        lrbrc: left_right_brace {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC>, <&kp RBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        lrcmp: left_right_compare {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&kp GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
             key-positions = <33 36>;
             bindings = <&kp ESC>;
-		};
-		combo_cw {
-			timeout-ms = <50>;
+        };
+        combo_cw {
+            timeout-ms = <50>;
             key-positions = <13 16>;
             bindings = <&caps_word>;
-		};
-	};
+        };
+    };
 
-	keymap {
-		compatible = "zmk,keymap";
-		// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+    keymap {
+        compatible = "zmk,keymap";
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         base_layer {
-			label= "BASE";
-			bindings = <
+            label= "BASE";
+            bindings = <
 
                 &kp X        &kp V       &kp J        &kp D        &kp Z           &kp SQT     &kp W         &kp FSLH     &kp MINUS   &kp COMMA
                 &hml LGUI N  &hml LALT S &hml LCTRL H &hml LSHFT T &kp M           &kp Y       &hmr RSHFT C  &hmr RCTRL A &hmr RALT E &hmr RGUI I
     &kp EQUAL   &kp B        &kp F       &kp L        &kp K        &kp Q           &kp P       &kp G         &kp O        &kp U       &kp DOT     &kp SEMI
-                                         &kp Q      &lt NAV R    &kp BSPC        &lt SYM RET &lt NUM SPACE &mo FUN
-			>;
-		};
+                                         &kp Q        &lt NAV R    &kp BSPC        &lt SYM RET &lt NUM SPACE &mo FUN
+            >;
+        };
 
-		// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
         nav_layer {
-			label= "NAV";
-			bindings = <
+            label= "NAV";
+            bindings = <
 
                 &none    &none    &none     &none     &none     &none        &kp C_BRI_DN &kp C_BRI_UP &none     &none
                 &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none     &kp TAB      &kp LEFT     &kp DOWN     &kp UP    &kp RIGHT
     &none       &none    &none    &none     &none     &none     &none        &kp HOME     &kp PG_DN    &kp PG_UP &kp END     &kp CAPS      
                                   &none     &trans    &none     &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE      
-			>;
-		};
+            >;
+        };
 
-		// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
         num_layer {
-			label= "NUM";
-			bindings = <
+            label= "NUM";
+            bindings = <
 
                 &kp FSLH &kp STAR &kp MINUS &kp PLUS &kp AMPS        &none &none      &none     &none    &none
                 &kp N4   &kp N3   &kp N2    &kp N1   &kp N9          &none &kp RSHFT  &kp RCTRL &kp RALT &kp RGUI
     &kp EXCL    &kp N8   &kp N7   &kp N6    &kp N5   &kp PIPE        &none &none      &none     &none    &none    &none
                                   &none     &kp N0   &kp EQUAL       &none &trans     &none
-			>;
-		};
+            >;
+        };
 
-		// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
         sym_layer {
-			label= "SYM";
-			bindings = <
+            label= "SYM";
+            bindings = <
 
                 &kp AT    &kp CARET &kp TILDE &kp PRCNT &none          &none  &none     &none     &none    &none
                 &kp LT    &kp LBRC  &kp LBKT  &kp LPAR  &kp DLLR       &none  &kp RSHFT &kp RCTRL &kp RALT &kp RGUI
     &kp GRAVE   &kp GT    &kp RBRC  &kp RBKT  &kp RPAR  &none          &none  &none     &none     &none    &none    &none
                                     &none     &kp HASH  &kp BSLH       &trans &none     &none
-			>;
-		};
+            >;
+        };
 
-		// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
         adjust_layer {
-			label= "ADJ";
-			bindings = <
+            label= "ADJ";
+            bindings = <
 
                 &bt BT_CLR_ALL &none &none  &none    &none &none &none &out OUT_TOG &bt BT_CLR &sys_reset
                 &none          &none &none  &none    &none &none &none &none        &bt BT_NXT &bootloader  
     &none       &none          &none &none  &none    &none &none &none &none        &bt BT_PRV &none       &bt BT_SEL 0         
                                &trans &none &none    &none &none &none      
-			>;
-		};
+            >;
+        };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-		fun_layer {
-			label= "FUN";
-			bindings = <
+        fun_layer {
+            label= "FUN";
+            bindings = <
 
                 &kp F12  &kp F11  &kp F10   &kp F9   &kp F15        &out OUT_TOG &bt BT_CLR &bt BT_NXT &none    &none
                 &kp F4   &kp F3   &kp F2    &kp F1   &kp F13        &bt BT_SEL 0 &kp RSHFT  &kp RCTRL  &kp RALT &kp RGUI
     &kp EXCL    &kp F8   &kp F7   &kp F6    &kp F5   &kp F14        &none        &sys_reset &bt BT_PRV &none    &none    &bt BT_CLR_ALL
                                   &none     &none    &none          &none        &none          &trans
-			>;
-		};
-	};
+            >;
+        };
+    };
 };
