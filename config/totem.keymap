@@ -177,9 +177,9 @@
             label= "FUN";
             bindings = <
 
-                &kp F12  &kp F11  &kp F10   &kp F9   &kp F15        &out OUT_TOG &bt BT_CLR &bt BT_NXT &none    &none
-                &kp F4   &kp F3   &kp F2    &kp F1   &kp F13        &bt BT_SEL 0 &kp RSHFT  &kp RCTRL  &kp RALT &kp RGUI
-    &kp EXCL    &kp F8   &kp F7   &kp F6    &kp F5   &kp F14        &none        &sys_reset &bt BT_PRV &none    &none    &bt BT_CLR_ALL
+                &kp F9   &kp F10  &kp F11   &kp F12  &kp F15        &out OUT_TOG &bt BT_CLR &bt BT_NXT &none    &none
+                &kp F1   &kp F2   &kp F3    &kp F4   &kp F13        &bt BT_SEL 0 &kp RSHFT  &kp RCTRL  &kp RALT &kp RGUI
+    &kp EXCL    &kp F5   &kp F6   &kp F7    &kp F8   &kp F14        &none        &sys_reset &bt BT_PRV &none    &none    &bt BT_CLR_ALL
                                   &none     &none    &none          &none        &none          &trans
             >;
         };
